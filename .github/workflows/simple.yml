@@ -1,0 +1,14 @@
+name: shell comands
+
+on: [push]
+
+jobs:
+    run-command:
+        runs-on: ubuntu-latest
+        steps:
+          - name: to run single run-command
+            run: echo "hello world"
+          - name: to run multiple commands
+            run: |
+                node -v
+                npm -v
