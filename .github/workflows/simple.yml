@@ -3,7 +3,7 @@ name: shell comands
 on: [push]
 
 jobs:
-    run-command:
+    run-command: #first job
         runs-on: ubuntu-latest
         steps:
           - name: to run single run-command
@@ -14,6 +14,15 @@ jobs:
                 npm -v
           - name: python commands
             run: |
-                print('hello world')
-                print(12+12)
+                print('welcome')
+                print(12*2)
             shell: python
+    run-command-windows: #second job
+        runs-on: windows-latest
+        steps:
+          - name: powershell location
+            run: Get-Location
+          - name: directory bash
+            run: pwd
+            shell: bash
+    
