@@ -19,6 +19,7 @@ jobs:
             shell: python
     run-command-windows: #second job
         runs-on: windows-latest
+        needs: ['run-command']
         steps:
           - name: powershell location
             run: Get-Location
