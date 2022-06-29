@@ -12,4 +12,4 @@ jobs:
           with:
             who-to-greet: Ayan
         - name: time of exec of actions/hello-world-javascript-action
-          run: echo"${{steps.greet.outputs.time}}"
+          run: echo "${{steps.greet.outputs.time}}"
