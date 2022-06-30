@@ -6,7 +6,7 @@ jobs:
   docker-container:
     runs-on: ubuntu-latest
     container:
-      image: nginx:1.23.0-alpine
+      image: node:18-alpine3.15
       #ports
       #volumes
       #env
