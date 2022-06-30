@@ -3,7 +3,27 @@ name: docker services
 on: push
 
 jobs:
-  docker-services:
+  docker-container: # running docker container with using different images in ubuntu-vm
+    runs-on: ubuntu-latest
+    container:
+      image: node:18-buster
+
+    steps:
+      - name : running command on 18-buster image-container
+        run: node -v
+
+      - name: running another image-container
+        uses: docker://node:12.14.1-apline3.10
+        with:
+          entrypoint: "bin/bash"
+          args: "hello world"
+
+      - name: running another image-container
+        uses: docker://node:12.14.1-apline3.10
+        with:
+          entrypoint: usr/local/bin/node
+          args: -v
+  docker-services: #running docker sevices
     runs-on: ubuntu-latest
     services:
       app:
