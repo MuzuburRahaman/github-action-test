@@ -1,6 +1,6 @@
 name: run action - this action is written in jobs
 
-on: [push]
+on: pull_request #[push]
 
 jobs:
     run-js:

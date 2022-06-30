@@ -1,0 +1,23 @@
+name: docker container
+
+on: push
+
+jobs:
+  docker-container:
+    runs-on: ubuntu-latest
+    container:
+      image: 1.23.0-alpine
+      #ports
+      #volumes
+      #env
+      #options
+    steps:
+      - name: command to run on container
+        run: |
+          node -v
+          cat /etc/os-release
+
+      - name: command to run on ubuntu-latest
+        run: |
+          docker ls
+          docker images
