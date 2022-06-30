@@ -17,8 +17,4 @@ jobs:
           node -v
           cat /etc/os-release
 
-      - name: command to run on ubuntu-latest
-        run: |
-          docker ls
-          docker images
-        shell: bash
+      
